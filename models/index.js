@@ -18,16 +18,14 @@ Category.hasMany(Product, {
 Product.belongsToMany(Tag, {
   through: {
     model: ProductTag
-  },
-  onDelete: 'CASCADE',
+  }
 })
 
 // Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
   through: {
     model: ProductTag
-  },
-  onDelete: 'CASCADE',
+  }
 })
 
 module.exports = {
